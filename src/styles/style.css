@@ -1,0 +1,28 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px 0px;
+}
+
+/* general */
+
+:root {
+  --yellow: #f4e56b;
+  --orange: #ff8000;
+  --pink: #ff45b4;
+  --gray: #1c1c1c;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+.grid {
+  display: grid;
+}
