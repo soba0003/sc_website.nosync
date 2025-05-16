@@ -23,6 +23,30 @@ img {
   --black: #000000;
 }
 
+h1 {
+  font-family: "Boldonse", sans-serif;
+  font-size: 35px;
+}
+
+h2 {
+  font-family: "Jersey 25", sans-serif;
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "lisbeth-display", sans-serif;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h4,
+p {
+  font-family: "Inconsolata", monospace;
+  font-weight: 500;
+}
+
 .no_line {
   text-decoration: none;
 }
