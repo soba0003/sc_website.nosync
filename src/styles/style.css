@@ -23,6 +23,14 @@ img {
   --black: #000000;
 }
 
+.no_line {
+  text-decoration: none;
+}
+
 .grid {
   display: grid;
+}
+
+.grid_center {
+  place-self: center;
 }

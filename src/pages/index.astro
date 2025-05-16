@@ -7,18 +7,30 @@ import Menu from "../components/Menu.astro";
 import Index_links from "../components/Index_links.astro";
 import Index_events from "../components/Index_events.astro";
 import Event from "../components/Event.astro";
+import blue_texture from "../assets/blue_texture.webp";
 ---
 
 <Layout title="SoundConnects">
-  <header class="grid">
+  <main class="grid">
+    <img src={blue_texture.src} alt="dark blue sand/texture" />
     <Menu />
-  </header>
-  <main>
     <Index_links />
     <Index_events>
       <Event />
     </Index_events>
-  </main></Layout
->
+  </main>
+</Layout>
 
-<style></style>
+<style>
+  main {
+    background-color: var(--gray);
+    height: 100vh;
+  }
+  img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+</style>
