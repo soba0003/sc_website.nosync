@@ -4,22 +4,22 @@
 import "../styles/style.css";
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
-import Index_links from "../components/Index_links.astro";
-import Index_events from "../components/Index_events.astro";
+import IndexLinks from "../components/IndexLinks.astro";
+import IndexEvents from "../components/IndexEvents.astro";
 import Event from "../components/Event.astro";
-import blue_texture from "../assets/blue_texture.webp";
+import bluetexture from "../assets/blue_texture.webp";
 ---
 
 <Layout title="SoundConnects">
   <main class="grid">
-    <img src={blue_texture.src} alt="dark blue sand/texture" />
+    <img src={bluetexture.src} alt="dark blue sand/texture" />
     <Menu />
-    <Index_links />
-    <Index_events>
+    <IndexLinks />
+    <IndexEvents>
       <Event />
       <Event />
       <Event />
-    </Index_events>
+    </IndexEvents>
   </main>
 </Layout>
 

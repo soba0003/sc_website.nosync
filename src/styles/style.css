@@ -38,16 +38,15 @@ h3 {
 }
 
 h4 {
+  font-family: "Inconsolata", monospace;
   font-size: 16px;
 }
 
-h4,
 p {
-  font-family: "Inconsolata", monospace;
   font-weight: 500;
 }
 
-.no_line {
+.noline {
   text-decoration: none;
 }
 
@@ -55,6 +54,6 @@ p {
   display: grid;
 }
 
-.grid_center {
+.gridcenter {
   place-self: center;
 }
