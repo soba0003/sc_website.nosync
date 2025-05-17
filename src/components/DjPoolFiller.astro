@@ -1,0 +1,30 @@
+---
+const { text } = Astro.props;
+const { link } = Astro.props;
+---
+
+<div class="grid">
+  <p>
+    {text}
+    <a class="noline link" href="#">{link}</a>
+  </p>
+</div>
+
+<style>
+  div {
+    background-color: var(--orange);
+    padding: 4px;
+    aspect-ratio: 3/4;
+    width: 120px;
+    height: auto;
+  }
+  p {
+    color: var(--white);
+    line-height: 120%;
+    place-self: center;
+  }
+  .link {
+    color: var(--white);
+    font-weight: 900;
+  }
+</style>

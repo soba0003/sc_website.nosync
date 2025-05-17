@@ -1,0 +1,61 @@
+---
+//@ts-nocheck
+// tjekker ikke for notescript fejl så
+import "../styles/style.css";
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import DjPoolSingle from "../components/DjPoolSingle.astro";
+import DjPoolFiller from "../components/DjPoolFiller.astro";
+---
+
+<Layout title="DJ POOL">
+  <main class="grid">
+    <Menu />
+    <section class="grid">
+      <h1>DJ POOL</h1>
+      <div class="grid djpoolgrid">
+        <DjPoolSingle djname="dj ratz" />
+        <DjPoolSingle djname="mario" />
+        <DjPoolSingle djname="sandy p" />
+        <DjPoolSingle djname="lavv" />
+        <DjPoolSingle djname="ei.vn" />
+        <DjPoolFiller
+          text="WANT TO BE A PART OF THE POOL? SUMBIT TO  THE OPEN CALL"
+          link="HERE"
+        />
+        <DjPoolSingle djname="califano" />
+        <DjPoolSingle djname="minhi" />
+        <DjPoolSingle djname="stacy's gf" />
+        <DjPoolSingle djname="gæo" />
+        <DjPoolFiller
+          text="WE CONNECT ASPIRING ARTISTS WITH DIFFERENT OPPORTUNITIES"
+        />
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  section {
+    max-width: 300px;
+    justify-self: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  h1 {
+    color: var(--orange);
+    font-size: 40px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 30px;
+  }
+  .djpoolgrid {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    justify-self: center;
+    gap: 10px;
+    margin: 10px;
+  }
+</style>

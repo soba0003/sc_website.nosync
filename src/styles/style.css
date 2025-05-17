@@ -12,7 +12,7 @@ img {
   margin: 0px 0px;
 }
 
-/* general */
+/* root */
 
 :root {
   --yellow: #f4e56b;
@@ -21,7 +21,10 @@ img {
   --gray: #1c1c1c;
   --white: #ffffff;
   --black: #000000;
+  background-color: #1c1c1c;
 }
+
+/* fonts */
 
 h1 {
   font-family: "Boldonse", sans-serif;
@@ -39,16 +42,21 @@ h3 {
 
 h4 {
   font-family: "Inconsolata", monospace;
+  font-weight: 500;
   font-size: 16px;
 }
 
 p {
-  font-weight: 500;
+  font-family: "Inconsolata", monospace;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .noline {
   text-decoration: none;
 }
+
+/* layout */
 
 .grid {
   display: grid;
@@ -56,4 +64,8 @@ p {
 
 .gridcenter {
   place-self: center;
+}
+
+.flex {
+  display: flex;
 }
