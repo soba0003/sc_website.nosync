@@ -8,6 +8,24 @@ import IndexLinks from "../components/IndexLinks.astro";
 import IndexEvents from "../components/IndexEvents.astro";
 import Event from "../components/Event.astro";
 import bluetexture from "../assets/blue-texture.webp";
+
+const url = "https://giuqkiysxqqukuiwzihv.supabase.co/rest/v1/events";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdpdXFraXlzeHFxdWt1aXd6aWh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc1MDQ5MTAsImV4cCI6MjA2MzA4MDkxMH0.TREktbVlzVz0vGxNlhpw1WytBsYl1oGzxLOssFoTbDs";
+
+// så den kan læse nøglen
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+// console log kan kun læses i terminalen (du skal 'run nmp dev' først)
+const data = await fetch(url, options).then((res) => res.json());
+
+// Sortér events efter dato (tidligste først)
+const sortedEvents = data.sort((a, b) => new Date(a.date) - new Date(b.date));
+console.log(data);
 ---
 
 <Layout title="SoundConnects">
@@ -16,9 +34,7 @@ import bluetexture from "../assets/blue-texture.webp";
     <Menu />
     <IndexLinks />
     <IndexEvents>
-      <Event />
-      <Event />
-      <Event />
+      {data.slice(0, 3).map((event) => <Event {event} />)}
     </IndexEvents>
   </main>
 </Layout>
