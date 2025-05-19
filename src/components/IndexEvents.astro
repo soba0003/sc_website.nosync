@@ -6,7 +6,7 @@
   <h2>SoundConnects</h2>
   <h1>UPCOMING EVENTS</h1>
   <h4 class="h41">COPENHAGEN, DENMARK</h4>
-  <slot />
+  <slot class="slot" />
   <h4 class="h42">
     CHECK OUT THE REST OF OUR
     <a href="#">EVENTS</a>
@@ -16,6 +16,7 @@
 <style>
   section {
     padding-top: 10px;
+    gap: 50px;
   }
   h1 {
     color: var(--yellow);
@@ -36,5 +37,13 @@
   .h41 {
     grid-column: 1/2;
     grid-row: 3/4;
+  }
+  .slot {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .h42 {
+    grid-column: 1/2;
+    grid-row: 8/9;
   }
 </style>
