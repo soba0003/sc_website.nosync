@@ -1,7 +1,101 @@
-<div></div>
+<label class="burger">
+  <input type="checkbox" />
+  <div>MENU</div>
+</label>
+<!-- aside bliver her kun brugt for a11y -->
+<aside class="sidebar">
+  <nav>
+    <a href="#">Events</a>
+    <a href="#">DJ pool</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+</aside>
 
 <style>
+  .burger {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--burger-gap);
+    background-color: var(--yellow);
+    width: max-content;
+    justify-self: end;
+    position: absolute;
+    z-index: 100;
+    /* gør man kan se at man kan klikke på den */
+    cursor: pointer;
+  }
+  .burger::before,
+  .burger input {
+    /* content giver before og efter elementerne indhold, så man kan se dem på skærmen */
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--gray);
+  }
+
+  .burger::before,
+  .burger input,
   div {
+    transform-origin: left center;
+    transition:
+      opacity var(--animation-timing),
+      width var(--animation-timing),
+      translate var(--animation-timing),
+      rotate var(--animation-timing);
+  }
+
+  .burger input {
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  .burger:has(input:checked) div {
+    opacity: 0;
+    width: 0;
+  }
+  /* den kigger på om burger har en input indeni sig der er checked, hvis ja, så vælger den :before */
+  .burger:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0;
+  }
+
+  .burger:has(input:checked) input {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 14px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    justify-self: end;
+    position: absolute;
+    z-index: 10;
+    transition: translate var(--animation-timing);
+    translate: +100%;
+    padding: 70px 10px 0 10px;
+    background-color: red;
+    width: 150px;
+    min-height: 50vh;
+  }
+
+  /* + vælger noget udenfor burger, men tjekker stadig om input er checked */
+  .burger:has(input:checked) + .sidebar {
+    translate: 0;
+  }
+
+  /* div {
     width: 55px;
     height: 55px;
     background-color: var(--yellow);
@@ -9,5 +103,5 @@
     grid-row: 1/2;
     justify-self: end;
     z-index: 10;
-  }
+  } */
 </style>

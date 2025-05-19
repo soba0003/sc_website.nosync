@@ -13,7 +13,6 @@ img {
 }
 
 /* root */
-
 :root {
   --yellow: #f4e56b;
   --orange: #ff8000;
@@ -22,6 +21,12 @@ img {
   --white: #ffffff;
   --black: #000000;
   background-color: #1c1c1c;
+
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --burger-gap: 6px;
+  --animation-timing: 200ms ease-in-out;
+  --x-width: 40px;
 }
 
 /* fonts */
