@@ -5,16 +5,18 @@
 <!-- aside bliver her kun brugt for a11y -->
 <aside class="sidebar">
   <nav>
-    <a href="#">Events</a>
-    <a href="#">DJ pool</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href=".">MAIN PAGE</a>
+    <a href="events">EVENTS</a>
+    <a href="dj-pool">DJ POOL</a>
+    <a href="#">OPEN DJ CALL</a>
+    <a href="about">ABOUT</a>
+    <a href="#">CONTACT</a>
   </nav>
 </aside>
 
 <style>
   .burger {
-    padding: 5px;
+    padding: 15px 12px 14px 12px;
     display: flex;
     flex-direction: column;
     gap: var(--burger-gap);
@@ -53,7 +55,12 @@
   }
 
   div {
+    font-family: "Inconsolata", monospace;
+    font-weight: 400;
+    font-size: 21px;
+    letter-spacing: 1.54px;
     text-align: center;
+    margin-top: -6px;
   }
 
   .burger:has(input:checked) div {
@@ -70,12 +77,13 @@
   .burger:has(input:checked) input {
     rotate: -45deg;
     width: var(--x-width);
-    translate: 0 14px;
+    translate: 0 16px;
   }
 
   nav {
     display: flex;
     flex-direction: column;
+    gap: 5px;
   }
 
   .sidebar {
@@ -84,24 +92,24 @@
     z-index: 10;
     transition: translate var(--animation-timing);
     translate: +100%;
-    padding: 70px 10px 0 10px;
-    background-color: red;
-    width: 150px;
+    padding: 90px 10px 0 18px;
+    background-color: var(--yellow);
+    width: 220px;
     min-height: 50vh;
+  }
+  a {
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--gray);
+    text-decoration: none;
+  }
+  a:hover {
+    font-weight: 600;
   }
 
   /* + vælger noget udenfor burger, men tjekker stadig om input er checked */
   .burger:has(input:checked) + .sidebar {
     translate: 0;
   }
-
-  /* div {
-    width: 55px;
-    height: 55px;
-    background-color: var(--yellow);
-    grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: end;
-    z-index: 10;
-  } */
 </style>

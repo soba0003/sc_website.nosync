@@ -22,9 +22,9 @@ img {
   --black: #000000;
   background-color: #1c1c1c;
 
-  --bar-width: 60px;
-  --bar-height: 8px;
-  --burger-gap: 6px;
+  --bar-width: 46px;
+  --bar-height: 2px;
+  --burger-gap: 10px;
   --animation-timing: 200ms ease-in-out;
   --x-width: 40px;
 }
