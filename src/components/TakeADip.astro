@@ -73,4 +73,45 @@ import starimg from "../assets/star-img.png";
     grid-row: 3/4;
     place-self: end;
   }
+  @media (min-width: 1000px) {
+    .ocean {
+      height: 900px;
+    }
+    .star {
+      height: 700px;
+      justify-self: end;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    .h1box {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100px 100px 190px 230px;
+    }
+    .h11 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .h12 {
+      grid-column: 5/6;
+      grid-row: 1/2;
+      justify-self: start;
+    }
+    .h13 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    .h14 {
+      grid-column: 4/5;
+      grid-row: 2/3;
+      justify-self: start;
+    }
+    .h15 {
+      grid-column: 3/4;
+      grid-row: 3/4;
+      place-self: end;
+    }
+  }
 </style>

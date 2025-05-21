@@ -33,8 +33,9 @@ console.log(data);
     <h1>EVENTS</h1>
     <Menu />
     <section class="grid section1">
-      {data.map((event) => <Event {event} />)}
-      <PictureBanner />
+      <div class="grid">
+        {data.map((event) => <Event {event} />)}
+      </div>
       <TakeADip>
         <DjPoolLink h4="TAKE A DIP" />
       </TakeADip>
@@ -45,6 +46,10 @@ console.log(data);
 
 <style>
   .section1 {
+    gap: 0px;
+    margin-bottom: 40px;
+  }
+  div {
     gap: 40px;
     margin-bottom: 40px;
   }
@@ -55,5 +60,14 @@ console.log(data);
     padding-bottom: 25px;
     grid-column: 1/2;
     grid-row: 1/2;
+  }
+
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 110px;
+      text-align: center;
+      margin-top: -34px;
+      padding-bottom: 65px;
+    }
   }
 </style>
