@@ -1,0 +1,139 @@
+---
+import instaplaceholder from "../assets/insta-placeholder.png";
+---
+
+<section>
+  <div class="grid">
+    <img src={instaplaceholder.src} alt="" />
+    <h2>TORSDAGSTECHNO</h2>
+  </div>
+  <div class="info grid">
+    <h3>30.05.25</h3>
+    <p class="time">TIME: 12-18</p>
+    <p class="adress">ADRESS: JOLENE</p>
+    <a class="" href="#">Flæsketorvet 81-85, 1711 København</a>
+    <!-- maps kort -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.2467850138346!2d12.558641675952984!3d55.667308598573996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652537235b81e65%3A0x6c2aea3f7ce79666!2sJolene%20Bar!5e0!3m2!1sda!2sdk!4v1747840131720!5m2!1sda!2sdk"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p class="price">40DKK</p>
+    <p class="age">18+</p>
+  </div>
+  <h4>
+    This Techno Torsdag will once again be taken over and curated by the
+    Copenhagen collective, SoundConnects. By offering workshops and performing
+    experiences, the collective focuses on nurturing the growth of upcoming
+    artists and enhancing their presence in the scene.
+  </h4>
+  <p class="details">
+    MAIN:<br />
+    <br />
+    00:00-02:00 GÆO <br />
+    02:00-04:00 DJ VOID <br />
+    04:00-06:00 Stacy's gf <br />
+    <br />
+    KIOSK:<br />
+    <br />
+    00:00-02:00 Cøk[it]<br />
+    02:00-04:00 DJ RATZ<br />
+    04:00-06:00 DJ Dopamina<br />
+    <br />
+    SAFER SPACE & INCLUSION POLICY<br />
+    Webelieve partygoers, performers, and staff are all entitled to an environment
+    free from harassment, discriminatory behaviors, and exclusion.We expect everyone
+    to respect and commit to this policy:<br />
+    <br />
+    - No physical contact without consent.<br />
+    -No racism, homophobia, transphobia, or sexism.<br />
+    - No leering, you may look but don't stare.<br />
+    - No videos or photos at the club.<br />
+    <br />
+    At Module, we party with a common goal of creating a safer space for all. We
+    welcome all genders, races, sexual orientations, ages, and sizes. We will not
+    tolerate harassment of any form. Our staff are here for you, contact them at
+    any time if you experience any kind of discomfort. Our mission is to create a
+    clubbing experience wherein everyone feels safe, free, and included.Stay hydrated
+    and stay safe.
+  </p>
+</section>
+
+<style>
+  img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100vw;
+    height: auto;
+  }
+  h2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: var(--orange);
+    font-size: 13cqw;
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+  h4 {
+    font-weight: 400;
+  }
+  h4,
+  .details {
+    color: var(--white);
+    padding: 20px 0px 10px 5px;
+  }
+  .info {
+    background-color: var(--yellow);
+    color: var(--black);
+    width: 160px;
+    height: auto;
+    padding: 5px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .time {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .adress {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  a {
+    color: var(--black);
+    font-family: "Inconsolata", monospace;
+    font-weight: 300;
+    font-size: 15px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-bottom: 10px;
+  }
+  iframe {
+    width: 150px;
+    height: 140px;
+    grid-column: 1/2;
+    grid-row: 5/6;
+    justify-self: center;
+    margin-bottom: 10px;
+  }
+  .price {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+  .age {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    margin-bottom: 100px;
+  }
+</style>
