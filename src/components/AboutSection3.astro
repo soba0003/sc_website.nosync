@@ -1,0 +1,53 @@
+---
+import aboutplaceholder from "../assets/about-placeholder.png";
+---
+
+<section class="grid">
+  <h3>SOUND CONNECTS IS A COLLECTIVE AIMING FOR COMMUNITY AND OPPORTUNITY</h3>
+  <div class="grid">
+    <img class="img1" src={aboutplaceholder.src} alt="" />
+    <img class="img2" src={aboutplaceholder.src} alt="" />
+    <img class="img3" src={aboutplaceholder.src} alt="" />
+  </div>
+</section>
+
+<style>
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 10;
+    color: var(--pink);
+    font-size: 16cqw;
+    text-align: justify;
+    line-height: 95px;
+  }
+  div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  img {
+    width: 80px;
+    height: auto;
+  }
+  .img1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .img2 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: end;
+  }
+  .img3 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: center;
+  }
+</style>
