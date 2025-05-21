@@ -1,0 +1,42 @@
+---
+import bluetexture from "../assets/blue-texture.webp";
+import jumpin from "../assets/jump-in.png";
+---
+
+<section class="grid">
+  <img class="background" src={bluetexture.src} alt="dark blue sand/texture" />
+  <img class="wave" src={jumpin.src} alt="" />
+  <div>
+    <slot class="slot" />
+  </div>
+</section>
+
+<style>
+  section {
+    margin-top: 70px;
+    width: 100vw;
+    height: 100vh;
+  }
+  .background {
+    width: 100vw;
+    height: 100vh;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+    object-fit: cover;
+  }
+  .wave {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 5;
+    align-self: end;
+  }
+  div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 10;
+    margin-top: 150px;
+    align-self: center;
+    justify-self: end;
+  }
+</style>
