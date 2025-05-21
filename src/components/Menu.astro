@@ -1,3 +1,7 @@
+---
+const { color } = Astro.props;
+---
+
 <label class="burger">
   <input type="checkbox" />
   <div>MENU</div>
@@ -19,8 +23,8 @@
     padding: 15px 12px 14px 12px;
     display: flex;
     flex-direction: column;
-    gap: var(--burger-gap);
     background-color: var(--yellow);
+    gap: var(--burger-gap);
     width: max-content;
     justify-self: end;
     position: absolute;
@@ -113,5 +117,12 @@
   /* + vælger noget udenfor burger, men tjekker stadig om input er checked */
   .burger:has(input:checked) + .sidebar {
     translate: 0;
+  }
+
+  .yellow {
+    background-color: var(--yellow);
+  }
+  .orange {
+    background-color: var(--orange);
   }
 </style>
