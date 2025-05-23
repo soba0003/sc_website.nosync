@@ -14,7 +14,7 @@ const formattedDate = event.date
 
 <div class={`eventbox grid ${event.direction}`}>
   <div class="readmorebox grid">
-    <a class="noline" href="#">READ MORE</a>
+    <a class="noline" href=`../event/${event.id}`>READ MORE</a>
     <img class="doodle" src={readmore.src} alt="yellow doodle" />
   </div>
   <div class={`contentbox grid ${event.color}`}>
