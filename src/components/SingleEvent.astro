@@ -13,8 +13,8 @@ const { singleEvent } = Astro.props;
       <h3>{singleEvent.date}</h3>
       <p class="time">TIME: {singleEvent.time}</p>
       <p class="adress">ADRESS: {singleEvent.venue}</p>
-      <a class="" href="#">{singleEvent.adress}</a>
-      <!-- maps kort -->
+      <a class="" href={singleEvent.adresslink}>{singleEvent.adress}</a>
+      <!-- {singleEvent.maps} virker ikke -->
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.2467850138346!2d12.558641675952984!3d55.667308598573996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652537235b81e65%3A0x6c2aea3f7ce79666!2sJolene%20Bar!5e0!3m2!1sda!2sdk!4v1747840131720!5m2!1sda!2sdk"
         width="600"
