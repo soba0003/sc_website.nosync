@@ -1,13 +1,15 @@
 ---
 const { color } = Astro.props;
+import instagram from "../assets/instagram.svg";
+import facebook from "../assets/facebook.svg";
 ---
 
-<label class="burger">
+<label class=`burger ${color}`>
   <input type="checkbox" />
   <div>MENU</div>
 </label>
 <!-- aside bliver her kun brugt for a11y -->
-<aside class="sidebar">
+<aside class=`sidebar ${color}`>
   <nav>
     <a href=".">MAIN PAGE</a>
     <a href="events">EVENTS</a>
@@ -15,6 +17,14 @@ const { color } = Astro.props;
     <a href="#">OPEN DJ CALL</a>
     <a href="about">ABOUT</a>
     <a href="#">CONTACT</a>
+    <div class="flex some">
+      <a href="https://www.instagram.com/soundconnects_cph/">
+        <img src={instagram.src} alt="instagram logo" />
+      </a>
+      <a href="https://www.facebook.com/SoundConnects/">
+        <img src={facebook.src} alt="facebook logo" />
+      </a>
+    </div>
   </nav>
 </aside>
 
@@ -23,11 +33,10 @@ const { color } = Astro.props;
     padding: 15px 12px 14px 12px;
     display: flex;
     flex-direction: column;
-    background-color: var(--yellow);
     gap: var(--burger-gap);
     width: max-content;
     justify-self: end;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     /* gør man kan se at man kan klikke på den */
     cursor: pointer;
@@ -94,14 +103,13 @@ const { color } = Astro.props;
 
   .sidebar {
     justify-self: end;
-    position: absolute;
+    position: fixed;
     z-index: 50;
     transition: translate var(--animation-timing);
     translate: +100%;
     padding: 90px 10px 0 18px;
-    background-color: var(--yellow);
     width: 220px;
-    min-height: 50vh;
+    min-height: 60vh;
   }
   a {
     font-family: "Inconsolata", monospace;
@@ -118,7 +126,14 @@ const { color } = Astro.props;
   .burger:has(input:checked) + .sidebar {
     translate: 0;
   }
-
+  img {
+    width: 25px;
+    height: auto;
+  }
+  .some {
+    margin-top: 20px;
+    gap: 10px;
+  }
   .yellow {
     background-color: var(--yellow);
   }
