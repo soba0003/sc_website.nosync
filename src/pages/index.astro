@@ -8,6 +8,7 @@ import IndexLinks from "../components/IndexLinks.astro";
 import IndexEvents from "../components/IndexEvents.astro";
 import Event from "../components/Event.astro";
 import bluetexture from "../assets/blue-texture.webp";
+import Footer from "../components/Footer.astro";
 
 const url = "https://giuqkiysxqqukuiwzihv.supabase.co/rest/v1/events";
 const key =
@@ -36,6 +37,8 @@ console.log(data);
     <IndexEvents>
       {data.slice(0, 3).map((event) => <Event {event} />)}
     </IndexEvents>
+    <Footer background="blue" />
+    <div></div>
   </main>
 </Layout>
 
@@ -46,5 +49,10 @@ console.log(data);
     height: 100vh;
     width: 100vw;
     object-fit: cover;
+  }
+  div {
+    height: 200px;
+    width: 100%;
+    color: var(--grey);
   }
 </style>

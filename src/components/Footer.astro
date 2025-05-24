@@ -1,0 +1,89 @@
+---
+import logo from "../assets/logo.svg";
+import instagram from "../assets/instagram.svg";
+import facebook from "../assets/facebook.svg";
+const { background } = Astro.props;
+---
+
+<footer class="grid">
+  <img src={logo.src} />
+  <div class={`background grid ${background}`}>
+    <nav>
+      <a href="../.">MAIN PAGE</a>
+      <a href="../about">ABOUT</a>
+      <a href="../events">EVENTS</a>
+      <a href="../dj-pool">DJ POOL</a>
+      <a href="">OPEN DJ CALL</a>
+      <a href="">CONTACT</a>
+    </nav>
+    <div class="flex some">
+      <a href="https://www.instagram.com/soundconnects_cph/">
+        <img class="icon" src={instagram.src} alt="instagram logo" />
+      </a>
+      <a href="https://www.facebook.com/SoundConnects/">
+        <img class="icon" src={facebook.src} alt="facebook logo" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100vw;
+    height: 190px;
+  }
+  img {
+    height: 190px;
+    width: auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 10;
+    place-self: end;
+  }
+  .background {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100vw;
+    height: 150px;
+    z-index: 1;
+    place-self: end;
+    grid-template-columns: 130px 80px 1fr;
+  }
+  .blue {
+    background-image: url(../../public/img/blue-texture.webp);
+  }
+  .gray {
+    background-color: var(--gray);
+  }
+  nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 10px 0 10px 20px;
+  }
+  a {
+    font-family: "Jersey 25", monospace;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--orange);
+  }
+  .icon {
+    width: 25px;
+    height: auto;
+  }
+  .some {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    gap: 10px;
+    align-self: end;
+    justify-self: start;
+  }
+</style>
