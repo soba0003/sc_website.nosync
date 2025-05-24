@@ -1,10 +1,10 @@
 ---
 const { djname } = Astro.props;
-import Placeholder from "../assets/dj-pool-placeholder.png";
+const { img } = Astro.props;
 ---
 
 <div class="grid">
-  <img src={Placeholder.src} alt="" />
+  <img src={img} alt="" />
   <h3>{djname}</h3>
 </div>
 
