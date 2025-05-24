@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import DjPoolSingle from "../components/DjPoolSingle.astro";
 import DjPoolFiller from "../components/DjPoolFiller.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="DJ POOL">
@@ -37,6 +38,7 @@ import DjPoolFiller from "../components/DjPoolFiller.astro";
         <DjPoolSingle djname="eli moore" />
       </div>
     </section>
+    <Footer background="blue" />
   </main>
 </Layout>
 
@@ -45,6 +47,7 @@ import DjPoolFiller from "../components/DjPoolFiller.astro";
     justify-self: center;
     grid-column: 1/2;
     grid-row: 1/2;
+    margin-bottom: 80px;
   }
   h1 {
     color: var(--orange);
