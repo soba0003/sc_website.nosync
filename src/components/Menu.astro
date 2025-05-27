@@ -40,8 +40,9 @@ import facebook from "../assets/facebook.svg";
     z-index: 100;
     /* gør man kan se at man kan klikke på den */
     cursor: pointer;
-    /* position: sticky;
-    top: 0; */
+    /* position: sticky; */
+    top: 0;
+    right: 0;
   }
   .burger::before,
   .burger input {
@@ -139,5 +140,12 @@ import facebook from "../assets/facebook.svg";
   }
   .orange {
     background-color: var(--orange);
+  }
+
+  @media (max-width: 600px) {
+    .burger {
+      right: 0;
+      left: auto;
+    }
   }
 </style>
