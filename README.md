@@ -1,48 +1,44 @@
-# Astro Starter Kit: Basics
+# Teknisk dokumentation for SoundConnects - Eksamensprojekt 2sem
 
-```sh
-npm create astro@latest -- --template basics
-```
+Dette website er udviklet i Astro, som er et digitalt framework, der gør det muligt at arbejde komponentbaseret i Visual Studio Code. Komponenter kan her både være sektioner i et flow på en bestemt side, eller mindre dele som burger menu eller footer, der går igen på alle sider.
+For at sikre fleksibilitet og genanvendelighed i komponenterne har jeg anvendt Astro's props og slots. Dette gør det muligt at tilpasse indholdet dynamisk og effektivt genbruge komponenterne på tværs af forskellige sider og sektioner. Dette gør det også nemmere at lave indholdet dynamisk, da der allerede på tværs af Astro komponenterne bruges JavaScript.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Projektstruktur:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Billeder lægges i src/assets, og i tilfælde hvor den løsning ikke virker i forbindelse forskellige billeder i én komponent, bruges public/img
+- Sider lægges i pages, og i tilfælde af dynamiske singleview, oprettes en specifik mappe indeni pages til dette, f.eks. pages/events
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Pages:
 
-## 🚀 Project Structure
+- filnavnet skrives med små bogstaver, og - bruges som mellemrum, f.eks. dj-pool.astro
 
-Inside of your Astro project, you'll see the following folders and files:
+## Components:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- filnavnet starter med stort bogstav, samt hvert nyt ord, uden nogen mellemrum, f.eks. DjPoolFiller.astro
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Classes:
 
-## 🧞 Commands
+- klasse navnet skrives med små bogstaver, uden mellemrum, f.eks. .gridcenter
 
-All commands are run from the root of the project, from a terminal:
+## Const (Astro props):
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- konstant navnet skrives med små bogstaver, uden mellemrum, f.eks. djname (med mindre der refereres til en dynamisk single event)
 
-## 👀 Want to learn more?
+## Constants (var(--)):
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- konstant navnet skrives med små bogstaver, og - bruges som mellemrum, f.eks. --bar-width
+
+## Img (import):
+
+- billede navnet skrives med små bogstaver, uden mellemrum, f.eks. djpool1
+
+## Git branches:
+
+- branch navnet skrives med små bogstaver, og - bruges som mellemrum.
+- først nævnes hvilken side der arbejds på, derefter hvilken enhed/version, f.eks. events-mobile
+- branchen merches først ind i main, når hele versionen så vidt muligt er gennemført
+
+# Supabase
+
+- websitet bruger brug af eksptern data hentet fra en database, så events.astro listen bliver dynamisk, og singleEvent.astro laves ud fra hvilke event du trykker på.
+- singleEvent.astro filerne genkendes fra hinandnen ved at bruge hvert arrays id nr, som unik url
